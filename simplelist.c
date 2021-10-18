@@ -8,11 +8,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-struct node {
-    int id;
-    char name[100];
-    struct node * next;
-};
+#include "simplelist.h"
+
+
 void print_list(struct node * num){
     printf("Node ID: %d \t Node Name: %s \n", num -> id, num -> name);
     
