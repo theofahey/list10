@@ -36,22 +36,12 @@ struct node * free_list(struct node * num){
     }
     return ans;
 }
-int main(){
-    char c1[] = "Node1";
-    char c2[] = "Node2";
-    char c3[] = "Node3";
-    char c0[] = "Node0";
+struct node * remove_node(struct node * front, int data){
+    if (front -> id == data){
+	struct node * holder = front -> next;
+	free(front);
+	front = holder;
+	}
+    return front; 
 
-    struct node * end = NULL;
-    struct node * n3 = insert_front(end,3,c3);
-    struct node * n2 = insert_front(n3, 2, c2);
-    struct node * n1 = insert_front(n2, 1, c1);
-    struct node * n0 = insert_front(n1, 0,c0);
-    
-    print_list(n0);
-    printf("Original Point: %p\n", n0);
-    free_list(n0);
-    printf("After Point: %p\n", n0);
-    return 0;
 }
-

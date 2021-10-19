@@ -9,3 +9,4 @@ struct node {
 void print_list(struct node * num);
 struct node * insert_front(struct node * num, int this_id, char * this_name);
 struct node * free_list(struct node * num);
+struct node * remove_node(struct node * front, int data);
