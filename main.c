@@ -13,7 +13,7 @@ int main(){
     end = insert_front(end, 0,c0);
     
     print_list(end);
-    end = remove_node(end, 0);
+    end = remove_node(end, 2);
     printf("Removed First Element: \n");
     print_list(end);
     printf("Original Point: %p\n", end);
