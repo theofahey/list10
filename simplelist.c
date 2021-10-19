@@ -28,7 +28,7 @@ struct node * insert_front(struct node * num, int this_id, char * this_name){
 }
 struct node * free_list(struct node * num){
     struct node * ans = malloc(sizeof(struct node));
-    while (num -> next != NULL){
+    while (num != NULL){
         struct node * holder = num -> next;
         free(num);
         num = holder;
